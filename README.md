@@ -22,3 +22,24 @@ I then moved onto the next task (manual_rps) which was to build a straight forwa
 which asks the user to input either rock, paper or scissors. Although the task didnt directly include building catch and error message for the user input, I decided to incorporate that in my 
 code. The next function build was to get the computers randomly generated response from the possible three choices of rock,paper,scissors. The third function, would take the 
 output generated from the two previous functions, and decide on a winner. The final function, takes in all the previous functions and stimulates a game.
+
+The next task was to write a new python script, camera_rps, which would use the webcam to take a picture of the user's hand as input instead of writting their input, and then use the model to predict what the user's hand gesture is. this essentially required 6 functions. T
+
+he first function named load_labels, opened the labels.txt file from the model and loads what each prediction index refers to {0:Rock, 1:Paper, 2:Scissors, 3:None}. 
+The second function is get_prediction, which takes in the image from the webcam, and uses the model to predict what the image is. 
+
+The third function is get_computer_choice which essentially leverages the random library to randomly select either Rock,Paper or Scissors. 
+
+The fourth function is get_winner, which takes in the user's choice and the computer's choice and decides who the winner is. Furthermore, it updates the score from the original dictionary game_results which is initialized at 0,0 and updates it based on the winner. 
+
+The fifth function is the count_down function which essentially prints a countdown of Rock Paper Scissors,Shoot,in the terminal to give the user time to get their hand in position.
+
+
+The final function is play game, which takes in all the previous functions and stimulates a game of rock,paper,scissors between the user and the computer. 
+
+To have the entire code run in a loop, I created a while loop which would run the play_game function until there is a winner or the user decides to quit using the Q key. Furthermore, The game would commence once the user presses the Enter key.
+
+General Comments: 
+Although the model on Teachable_Machine is very accurate once that model is downloaded and used in Python its seems to loose some of its accuracy. I am not sure why this is the case, but I am assuming it has to do with the fact that the model is trained on a very small dataset. I am going to try to train the model on a larger dataset and see if that improves the accuracy.
+
+
